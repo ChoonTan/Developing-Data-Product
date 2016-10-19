@@ -1,0 +1,35 @@
+---
+title: "Project 1 - R Markdown & Leaflet"
+author: "Choon Guan TAN"
+date: "October 20, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{R Settings, echo=FALSE}
+library(leaflet)
+library(shiny)
+
+```
+
+
+## Check Out My Usual Hangouts!
+
+```{R hangout, echo=FALSE}
+
+mymarkers<- data.frame(
+    lat=c(1.349020,1.310258,1.281001,1.401020,1.331343),
+    lng=c(103.960556,103.945550,103.851574,103.904389,103.948402))
+
+mylabels<- c("Home Sweet Home","Weekly Run Starting Point", "Where My Boss Sits","Mom's Place","Breakfast!!")
+
+mymarkers %>%
+    leaflet() %>%
+    addTiles() %>%
+    addMarkers(popup = mylabels)
+
+```
