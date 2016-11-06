@@ -22,9 +22,12 @@ shinyUI(fluidPage(
                 tabPanel("About",
                          mainPanel(h5("This simple Shiny app was developed to enable users to visually explore 
                                       the relationship between miles per gallon (mpg) and other variables in the
-                                      mtcars dataset.")))
+                                      mtcars dataset."),
+                                      
+                                    h5("Select the independent variables from the dropdown list to generate
+                                      corresponding the data plot."))
                     
             
-        )
-)
-)))
+        ))
+    ))
+))
